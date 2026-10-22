@@ -1,12 +1,11 @@
 # Blinklink Feed Sandbox
 
-Minimal POC for the Blinklink Recommended Feed web integration, following the
-[Web Integration Guide] 2-step setup:
+A test page for the v5 feeds embed (web-embed), hosted on GitHub Pages:
+https://kaustubh-blinklink.github.io/blinklink-feed-sandbox/
 
-1. Loader script in `<head>`: `https://ssr.sdk.blinklink.com/loader/loader.js`
-2. Feed container `<div>` with `hx-*` attributes pointing at
-   `https://web.sdk.blinklink.com/web/ui/carousel`
-
-Configured with stream `STREAM0001`, placement `PLACEMENT0001`.
-
-Hosted on GitHub Pages: https://kaustubh-blinklink.github.io/blinklink-feed-sandbox/
+- `index.html` — the **Third Wave** (social, dev) feed "Feed sandbox", slot `feed-sandbox`, drawn twice: the
+  console's one-line inline tag and its UI trigger. The page URL is on Third Wave's whitelist (added by Create Feed
+  in console-v5 dev), so the feed serves here; any other path on this site is an unknown page and lands in the
+  whitelist as a pending request.
+- `legacy.html` — the original POC against the old stack (web-sdk carousel, stream `STREAM0001`, placement
+  `PLACEMENT0001`).
